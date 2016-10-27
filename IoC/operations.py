@@ -1,6 +1,6 @@
 class Operations:
 	def __init__(self, product):
-		self.__product = product
+		self.__product = product # Injecting Dependency
 
 	def isProduct(self, productName):
 		allproduct = (self.__product).getList();

@@ -10,12 +10,8 @@ class Product:
 		return self.__productList;
 
 class Operations:
-	def __init__(self,product):
-		self.__product = product
-
-
-	def isProduct(self, productName):
-		allproduct = self.__product.getList();
+	def isProduct(self, product, productName):
+		allproduct = product.getList();
 		for it in allproduct[:]:
 			if it['name'] != productName:
 				allproduct.remove(it)
@@ -29,8 +25,8 @@ def main():
 	flip.add("Fridge",50000)
 	flip.add("Fridge",10000)
 
-	op = Operations(flip);
-	out = op.isProduct("TV")
+	op = Operations();
+	out = op.isProduct(flip,"Fridge")
 	print(out)
 
 if __name__ == "__main__": main() 
