@@ -19,7 +19,7 @@ def main():
 	flip.add("Fridge",10000)
 
 	op = Operations.operation();
-	out = op.isProduct("Fridg")
+	out = op.isProduct("TV")
 	print(out)
 
 if __name__ == "__main__": main() 
